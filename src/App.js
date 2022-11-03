@@ -1,9 +1,12 @@
-import "./App.css";
+import "./App.scss";
+import SearchBox from "./components/search-box/search-box.component";
+import WeatherAPI from "./API/weather-api.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <h1>hii</h1>
+    <div>
+      <SearchBox />;
+      <WeatherAPI />
     </div>
   );
 }
