@@ -1,0 +1,114 @@
+[
+  {
+    "code": "0",
+    "message": "Clear Sky"
+  },
+  {
+    "code": "1",
+    "message": "Mainly Clear"
+  },
+  {
+    "code": "2",
+    "message": "Partly cloudy"
+  },
+  {
+    "code": "3",
+    "message": "Overcast"
+  },
+  {
+    "code": "45",
+    "message": "Fog and depositing rime fog"
+  },
+  {
+    "code": "48",
+    "message": "Fog and depositing rime fog"
+  },
+  {
+    "code": "51",
+    "message": "Drizzle: Light"
+  },
+  {
+    "code": "53",
+    "message": "Drizzle: Moderate"
+  },
+  {
+    "code": "55",
+    "message": "Drizzle: Dense intensity"
+  },
+  {
+    "code": "56",
+    "message": "Freezing drizzle: Light intensity"
+  },
+  {
+    "code": "57",
+    "message": "Freezing drizzle:dense intensity"
+  },
+  {
+    "code": "61",
+    "message": "Rain: Slight"
+  },
+  {
+    "code": "63",
+    "message": "Rain: Moderate"
+  },
+  {
+    "code": "65",
+    "message": "Rain: Heavy intensity"
+  },
+  {
+    "code": "66",
+    "message": "Freezing rain: Light intensity"
+  },
+  {
+    "code": "67",
+    "message": "Freezing rain: Heavy intensity"
+  },
+  {
+    "code": "71",
+    "message": "Snow Fall: Slight intensity"
+  },
+  {
+    "code": "73",
+    "message": "Snow Fall: Moderate intensity"
+  },
+  {
+    "code": "75",
+    "message": "Snow Fall: Heavy intensity"
+  },
+  {
+    "code": "77",
+    "message": "Snow grains"
+  },
+  {
+    "code": "80",
+    "message": "Rain showers: Slight"
+  },
+  {
+    "code": "81",
+    "message": "Rain showers: Moderate"
+  },
+  {
+    "code": "82",
+    "message": "Rain showers: Violent"
+  },
+  {
+    "code": "85",
+    "message": "Snow showers: Slight intensity"
+  },
+  {
+    "code": "86",
+    "message": "Snow showers: Heavy intensity"
+  },
+  {
+    "code": "95*",
+    "message": "Thunderstorm: Slight/Moderate"
+  },
+  {
+    "code": "96",
+    "message": "Thunderstorm with slight hail"
+  },
+  {
+    "code": "99*",
+    "message": "Thunderstorm with heavy hail"
+  }
+]

@@ -1,21 +1,63 @@
 [
   {
     "id": 1,
-    "country": "berlin",
+    "country": "Berlin",
     "latitude": "52.52",
     "longitude": "13.41"
   },
 
   {
     "id": 2,
-    "country": "paris",
+    "country": "Paris",
     "latitude": "48.8567",
     "longitude": "2.3510"
   },
   {
     "id": 3,
-    "country": "london",
+    "country": "London",
     "latitude": "51.5002",
     "longitude": "-0.1262"
+  },
+  {
+    "id": 4,
+    "country": "NewDelhi",
+    "latitude": "28.6353",
+    "longitude": "77.2250"
+  },
+  {
+    "id": 5,
+    "country": "Madrid",
+    "latitude": "40.4167",
+    "longitude": "-3.7033"
+  },
+  {
+    "id": 6,
+    "country": "Vienna",
+    "latitude": "48.2092",
+    "longitude": "16.3728"
+  },
+  {
+    "id": 7,
+    "country": "Brussels",
+    "latitude": "50.8371",
+    "longitude": "4.3676"
+  },
+  {
+    "id": 8,
+    "country": "Moscow",
+    "latitude": "55.7558",
+    "longitude": "37.6176"
+  },
+  {
+    "id": 9,
+    "country": "Sofia",
+    "latitude": "42.7105",
+    "longitude": "23.3238"
+  },
+  {
+    "id": 10,
+    "country": "Copenhagen",
+    "latitude": "55.6763",
+    "longitude": "12.5681"
   }
 ]

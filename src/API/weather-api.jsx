@@ -1,21 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import WeatherData from "../components/weather-data/weather-data.component";
 
-const WeatherAPI = () => {
-  const [temperature, setTemperature] = useState("");
-  const weatherData = async () => {
+const WeatherAPI = ({ selectedCountry }) => {
+  const [weatherData, setWeatherData] = useState({});
+
+  const fetchWeatherData = async () => {
     const response = await fetch(
-      `https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m&current_weather=true`
+      `https://api.open-meteo.com/v1/forecast?latitude=${selectedCountry.latitude}&longitude=${selectedCountry.longitude}&hourly=temperature_2m&current_weather=true`
     );
     const { current_weather } = await response.json();
-    console.log(current_weather);
-    setTemperature(current_weather.temperature);
+    setWeatherData(current_weather);
   };
-  weatherData();
-  return (
-    <div>
-      <h2>Temperature:{temperature}</h2>
-    </div>
-  );
+
+  useEffect(() => {
+    fetchWeatherData();
+  }, [selectedCountry]);
+  return weatherData && <WeatherData currentWeather={weatherData} />;
 };
 
 export default WeatherAPI;

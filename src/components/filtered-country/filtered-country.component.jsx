@@ -1,31 +1,34 @@
+import { useState } from "react";
+import WeatherAPI from "../../API/weather-api";
 import data from "../../COUNTRY_LIST.json";
-import { searchCountryContext } from "../../contexts/search-country.context";
-import { useContext } from "react";
 
-const FilteredCountry = ({ textField }) => {
-  const { searchFields, setSearchFields } = useContext(searchCountryContext);
+const FilteredCountry = ({ searchFields }) => {
+  const [selectedCountry, setSelectedCountry] = useState({});
 
   const filteredCountry = data.filter((element) => {
-    if (textField === "") {
+    if (searchFields === "") {
       return element;
     } else {
-      return element.country.includes(textField);
+      return element.country.toLowerCase().includes(searchFields);
     }
   });
 
-  const onClickHandler = (event) => {
-    setSearchFields(event.target.textContent);
-  };
-
   return (
     <div className="country-buttons-container">
+      <h2>Country Names</h2>
       {filteredCountry.map((element) => {
         return (
-          <button onClick={onClickHandler} key={element.id}>
+          <button
+            onClick={() => {
+              setSelectedCountry(element);
+            }}
+            key={element.id}
+          >
             {element.country}
           </button>
         );
       })}
+      <WeatherAPI selectedCountry={selectedCountry} />
     </div>
   );
 };
