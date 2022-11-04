@@ -1,6 +1,7 @@
 import { useState } from "react";
 import WeatherAPI from "../../API/weather-api";
 import data from "../../COUNTRY_LIST.json";
+import { Button, ButtonGroup, Card } from "react-bootstrap";
 
 const FilteredCountry = ({ searchFields }) => {
   const [selectedCountry, setSelectedCountry] = useState({});
@@ -14,20 +15,23 @@ const FilteredCountry = ({ searchFields }) => {
   });
 
   return (
-    <div className="country-buttons-container">
-      <h2>Country Names</h2>
-      {filteredCountry.map((element) => {
-        return (
-          <button
-            onClick={() => {
-              setSelectedCountry(element);
-            }}
-            key={element.id}
-          >
-            {element.country}
-          </button>
-        );
-      })}
+    <div>
+      <Card.Title>Choose the city</Card.Title>
+      <ButtonGroup size="sm">
+        {filteredCountry.map((element) => {
+          return (
+            <Button
+              variant="secondary"
+              onClick={() => {
+                setSelectedCountry(element);
+              }}
+              key={element.id}
+            >
+              {element.country}
+            </Button>
+          );
+        })}
+      </ButtonGroup>
       <WeatherAPI selectedCountry={selectedCountry} />
     </div>
   );
